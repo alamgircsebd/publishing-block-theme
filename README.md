@@ -12,7 +12,7 @@ Publishing Block Theme uses Gutenberg full site editing option and some custom p
 
 == Installation ==
 
-1. Upload the theme files to the `/wp-content/themes/publishing` directory, or install the plugin through the WordPress theme screen directly.
+1. Upload the theme files to the `/wp-content/themes/publishing` directory, or install the theme through the WordPress theme screen directly.
 2. Activate the theme through the 'Themes' screen in WordPress
 
 == Changelog ==
