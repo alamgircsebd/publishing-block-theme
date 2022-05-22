@@ -1,18 +1,27 @@
 <?php
 
-function my_first_block_patterns_regsitry() {
-    $my_patterns_category = array(
-        'my_block_content' => array( 'label' => __( 'Main Content', 'my-block-theme' ) ),
+/**
+ * Register publishing patterns
+ * 
+ * @package publishing
+ * 
+ * @since 0.0.1
+ *
+ * @return void
+ */
+function publishing_patterns_regsitry() {
+    $patterns_category = array(
+        'publishing_banner' => array( 'label' => __( 'Publishing Banners', 'my-block-theme' ) ),
     );
 
-    foreach( $my_patterns_category as $name => $properties ) {
+    foreach ( $patterns_category as $name => $properties ) {
         if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
             register_block_pattern_category( $name, $properties );
         }
     }
 
     $block_patterns = [
-        'my-test-patterns',
+        'publishing-banner',
     ];
 
     foreach( $block_patterns as $block_pattern ) {
@@ -23,6 +32,5 @@ function my_first_block_patterns_regsitry() {
             require $block_pattern_url
         );
     }
-
 }
-add_action( 'init', 'my_first_block_patterns_regsitry' );
+add_action( 'init', 'publishing_patterns_regsitry' );
