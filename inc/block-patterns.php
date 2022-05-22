@@ -11,7 +11,7 @@
  */
 function publishing_patterns_regsitry() {
     $patterns_category = array(
-        'publishing_banner' => array( 'label' => __( 'Publishing Banners', 'my-block-theme' ) ),
+        'publishing_banner' => array( 'label' => __( 'Publishing Banners', 'publishing' ) ),
     );
 
     foreach ( $patterns_category as $name => $properties ) {
@@ -28,7 +28,7 @@ function publishing_patterns_regsitry() {
         $block_pattern_url = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
 
         register_block_pattern(
-            'my-block-theme/' . $block_pattern ,
+            'publishing-block-theme/' . $block_pattern ,
             require $block_pattern_url
         );
     }
